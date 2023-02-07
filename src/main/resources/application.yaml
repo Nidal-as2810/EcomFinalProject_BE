@@ -1,14 +1,23 @@
 server:
   port: 3020
 
+#spring:
+#  datasource:
+#    url: jdbc:h2:mem:mydb
+#    username: sa
+#    password: password
+#    driverClassName: org.h2.Driver
+#  jpa:
+#    spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
+#  h2:
+#    console:
+#      enabled: true
+
 spring:
-  datasource:
-    url: jdbc:h2:mem:mydb
-    username: sa
-    password: password
-    driverClassName: org.h2.Driver
+datasource:
+  driverClassName: com.mysql.jdbc.Driver
+  url: jdbc:mysql://containers-us-west-179.railway.app:6289/railway
+  username: root  // if you want
+  password: kTG1uZwyPfGDISTQUSu9
   jpa:
-    spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
-  h2:
-    console:
-      enabled: true
+    spring.jpa.properties.hibernate.dialect: org.hibernate.dialect.MySQL8Dialect
